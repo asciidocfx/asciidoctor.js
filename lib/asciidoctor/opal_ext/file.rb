@@ -119,7 +119,7 @@ class File
         var status = -1;
         try {
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', path, false);
+          xhr.open('POST', 'resource.afx', false);
           xhr.addEventListener('load', function() {
             status = this.status;
             // status is 0 for local file mode (i.e., file://)
@@ -128,7 +128,8 @@ class File
             }
           });
           xhr.overrideMimeType('text/plain');
-          xhr.send();
+          xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+          xhr.send('path='+encodeURIComponent(path));
         }
         catch (e) {
           status = 0;

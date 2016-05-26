@@ -450,6 +450,7 @@ Builder.prototype.copyExamplesResources = function(callback) {
 Builder.prototype.compile = function() {
   var builder = this;
 
+  builder.execSync('cd asciidoctor && rake install');
   builder.execSync('bundle install');
 
   var opalCompiler = new OpalCompiler({dynamicRequireLevel: 'ignore'});

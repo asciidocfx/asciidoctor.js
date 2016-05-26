@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'opal', '0.9.0.beta2'
+gem 'opal', '0.9.2'
 #gem 'opal', :github => 'opal'
-gem 'asciidoctor', '1.5.4'
+#gem 'asciidoctor', '1.5.4'
 #gem 'asciidoctor', :github => 'asciidoctor', :ref => 'master'
-#gem 'asciidoctor', :path => 'asciidoctor'
+gem 'asciidoctor', :path => 'asciidoctor'
