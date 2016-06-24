@@ -16,11 +16,11 @@
   ],
   "scripts": {
     "test": "node npm/test/jasmine-bower.js && node npm/test/jasmine-bower-min.js && node npm/test/jasmine-npm.js",
-    "build": "node npm/build.js",
-    "package": "MINIFY=1 node npm/build.js && MINIFY=1 npm run test",
+    "build": "cross-env MINIFY=1 node npm/build.js",
+    "package": "cross-env MINIFY=1 node npm/build.js && cross-env MINIFY=1 npm run test",
     "examples": "node npm/examples.js",
     "benchmark": "node npm/benchmark.js",
-    "release": "MINIFY=1 node npm/release.js"
+    "release": "cross-env MINIFY=1 node npm/release.js"
   },
   "repository": {
     "type": "git",
@@ -48,10 +48,11 @@
     "xmlhttprequest": "~1.7.0"
   },
   "devDependencies": {
-    "bower": "^1.5.3",
-    "jasmine": "^2.4.1",
-    "colors": "1.1.2",
     "async": "^1.5.0",
+    "bower": "^1.5.3",
+    "colors": "1.1.2",
+    "cross-env": "^1.0.8",
+    "jasmine": "^2.4.1",
     "tar-fs": "1.11.1"
   }
 }

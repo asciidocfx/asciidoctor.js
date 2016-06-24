@@ -473,7 +473,7 @@ Builder.prototype.compile = function() {
 
   log.title('compile extensions-lab lib');
   if (fs.existsSync('extensions-lab/lib')) {
-    opalCompileExtensions(['chrome-inline-macro', 'man-inline-macro', 'emoji-inline-macro', 'chart-block-macro']);
+    opalCompileExtensions(['chrome-inline-macro', 'man-inline-macro', 'emoji-inline-macro', 'chart-block-macro','gist-block-macro','emoji-inline-macro']);
   } else {
     log.error("Unable to cross-compile extensions because git submodule 'extensions-lab' is not initialized.");
     log.info("To initialize the submodule use the following command `git submodule init` and `git submodule update`.");
